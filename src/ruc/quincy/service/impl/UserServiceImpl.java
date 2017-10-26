@@ -18,4 +18,10 @@ public class UserServiceImpl implements UserService{
 	public User login(String user_nickname,String user_password){
 		return userMapper.finadUser(user_nickname, user_password);
 	}
+
+	//UserService接口register方法实现
+	@Override
+	public boolean register(User user) {
+		return userMapper.addUser(user);
+	}
 }

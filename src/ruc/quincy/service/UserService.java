@@ -8,4 +8,7 @@ public interface UserService {
 	
 	//判断用户登录
 	User login(String user_nickname,String user_password);
+	
+	//用户注册
+	boolean register(User user);
 }

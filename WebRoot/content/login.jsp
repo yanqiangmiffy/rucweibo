@@ -35,7 +35,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <a class="nav-link" href="#">联系我们</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">加入我们</a>
+                <a class="nav-link" href="register">加入我们</a>
             </li>
         </ul>
     </nav>

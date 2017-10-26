@@ -7,8 +7,10 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
@@ -18,8 +20,8 @@ import ruc.quincy.service.UserService;
 
 @Controller
 public class UserController {
-	//静态日志类
-	Log logger=LogFactory.getLog(UserController.class);
+	//静态的日志类LogFactory
+	private static final Log logger=LogFactory.getLog(UserController.class);
 	
 	//自动注入UserService
 	@Autowired
@@ -52,5 +54,34 @@ public class UserController {
 			mv.setViewName("login");
 		}
 		return mv;
+	}
+	
+	//加载注册页面，方法为GET
+	@RequestMapping(value="/register",method=RequestMethod.GET)
+	public String registerPage(){
+		System.out.println("加载登录页面");
+		return "register";
+	}
+	
+	//处理注册请求,方法为POST
+	@RequestMapping(value="/register",method=RequestMethod.POST)
+	public String register(
+			//将请求中的user_nickname参数的值赋给user_nickname变量，其他参数同样处理
+			@RequestParam("user_nickname") String user_nickname,
+			@RequestParam("user_password") String user_password,
+			@RequestParam("user_email") String user_email,
+			Model model
+			){
+		//创建User对象
+		User user=new User();
+		user.setUser_nickname(user_nickname);
+		user.setUser_password(user_password);
+		user.setUser_email(user_email);
+		if(!userService.register(user)){
+			//注册成功，跳抓到登录页面
+			return "register";
+		}
+		return "login";
+		
 	}
 }
