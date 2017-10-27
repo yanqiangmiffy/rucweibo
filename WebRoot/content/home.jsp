@@ -148,9 +148,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <h3>闫强</h3>
                 </div>
             </div>
-
+			<div class="row text-muted" style="padding-left:10px">
+				<div class="col-sm-12">
+					好好学习 ],天天向上. gogogggo!
+				</div>
+			</div>
             <div style="padding: 10px">
-                关注 2|粉丝 3|微博 4
+                	关注 2|粉丝 3|微博 4
             </div>
             <ul class="list-group">
                 <a href="" class="list-group-item">明天要数学考试好紧张</a>

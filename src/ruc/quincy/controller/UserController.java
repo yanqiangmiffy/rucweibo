@@ -78,6 +78,7 @@ public class UserController {
 			//将请求中的user_nickname参数的值赋给user_nickname变量，其他参数同样处理
 			@RequestParam("user_nickname") String user_nickname,
 			@RequestParam("user_password") String user_password,
+			@RequestParam("user_gender") String user_gender,
 			@RequestParam("user_email") String user_email,
 			Model model
 			){
@@ -85,6 +86,7 @@ public class UserController {
 		User user=new User();
 		user.setUser_nickname(user_nickname);
 		user.setUser_password(user_password);
+		user.setUser_gender(user_gender);
 		user.setUser_email(user_email);
 		if(!userService.register(user)){
 			//注册成功，跳抓到登录页面

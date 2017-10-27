@@ -57,12 +57,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <div class="col-md-2"><img src="images/头像.jpg"  alt=""></div>
             </div>
             <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
-                <div class="col-md-2"><img src="images/头像2.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
+                <div class="col-md-2"><img src="images/default.jpg"  alt=""></div>
             </div>
             <div class="row" style="padding-top: 10px;padding-bottom: 10px;">
                 <div class="col-md-2"><img src="images/头像1.jpg"  alt=""></div>
@@ -97,12 +97,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <font color="red">${requestScope.message}</font>
             <div>
                 <span style="display: inline-block">近期热门</span>
-                <ul class="list-group">
-                    <li class="list-group-item">薛之谦出事了</li>
-                    <li class="list-group-item">程序员被骗钱了</li>
-                    <li class="list-group-item">鹿晗表白了</li>
-                    <li class="list-group-item">薛之谦出轨了</li>
-                </ul>
+                <div class="list-group">
+                 	<a href="#" class="list-group-item list-group-item-action">薛之谦出事了</a>
+                 	<a href="#" class="list-group-item list-group-item-action">程序员被骗钱了</a>
+                 	<a href="#" class="list-group-item list-group-item-action">鹿晗表白了</a>
+                 	<a href="#" class="list-group-item list-group-item-action">鹿晗表白了</a>
+                </div>
             </div>
         </div>
     </div>

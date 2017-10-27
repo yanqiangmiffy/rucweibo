@@ -58,13 +58,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <div class="col-sm-10">
                                 <div class="form-check">
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                               value="option1" checked>
+                                        <input class="form-check-input" type="radio" name="user_gender" id="gridRadios1"
+                                               value="女" checked>
                                         女性
                                     </label>
                                     <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                               value="option2">
+                                        <input class="form-check-input" type="radio" name="user_gender" id="gridRadios2"
+                                               value="男">
                                         男性
                                     </label>
                                 </div>
@@ -80,14 +80,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-primary"> 注 册 </button>
+                            <button type="submit" id="submit" class="btn btn-primary"> 注 册 </button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <div class="form-check">
                                 <label class="form-check-label">
-                                    <input class="form-check-input" type="checkbox"> 《微博用户网络使用协议》
+                                    <input id="cbox" class="form-check-input" type="checkbox"> 《微博用户网络使用协议》
                                 </label>
                             </div>
                         </div>
@@ -108,5 +108,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#submit").click(function () {
+            if(!$("#cbox").is(":checked")){
+                alert("请请遵守微博用户协议");
+                return false;
+            }else{
+                $("form").submit();
+            }
+        });
+    });
+</script>
 </body>
 </html>

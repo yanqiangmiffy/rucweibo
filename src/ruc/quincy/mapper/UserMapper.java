@@ -14,8 +14,8 @@ public interface UserMapper {
 			@Param("user_password") String user_password);
 	
 	//实现用户注册
-	@Insert("insert into weibo_user(user_nickname,user_password,user_email) values(#{user_nickname},"
-			+ "#{user_password},#{user_email})")
+	@Insert("insert into weibo_user(user_nickname,user_password,user_gender,user_email) values(#{user_nickname},"
+			+ "#{user_password},#{user_gender},#{user_email})")
 	@Options(useGeneratedKeys=true,keyProperty="user_id")
 	boolean addUser(User user);
 }
