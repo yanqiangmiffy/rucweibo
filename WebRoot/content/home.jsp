@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <img src="images/头像.jpg" height="20px" width="20px" alt="头像" style="border-radius: 3px">
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item disabled" href="#">闫强</a>
+                            <a class="dropdown-item disabled" href="#">${sessionScope.user.user_nickname}</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">我的微博</a>
                             <a class="dropdown-item" href="#">个人资料</a>
@@ -145,7 +145,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
                 </div>
                 <div class="col-sm-4 text-center" style="padding: 5px">
-                    <h3>闫强</h3>
+                    <h3>${sessionScope.user.user_nickname}</h3>
                 </div>
             </div>
 			<div class="row text-muted" style="padding-left:10px">
