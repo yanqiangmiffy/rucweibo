@@ -80,7 +80,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             </div>
         </div>
         <div class="col-md-4">
-        	<font color="red">${requestScope.message}</font>
+        	
             <form action="login" method="post">
                 <div class="form-group">
                     <label for="user_nickname">用户名</label>
@@ -94,6 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <input type="submit" class="btn btn-primary form-control" value="登录微博">
                 </div>
             </form>
+            <font color="red">${requestScope.message}</font>
             <div>
                 <span style="display: inline-block">近期热门</span>
                 <ul class="list-group">

@@ -55,7 +55,12 @@ public class UserController {
 		}
 		return mv;
 	}
-	
+	//加载登录页面
+		@RequestMapping(value="/logout",method=RequestMethod.GET)
+		public String logout(){
+			System.out.println("加载登录页面");
+			return "login";
+		}
 	//加载注册页面，方法为GET
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String registerPage(){

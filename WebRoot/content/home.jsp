@@ -22,31 +22,41 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#containerNavbar" aria-controls="containerNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">RucWeibo</a>
 
         <div class="collapse navbar-collapse" id="containerNavbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">我的好友</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#">我的动态</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown04">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+
             </ul>
-            <form class="form-inline my-2 my-md-0">
-                欢迎闫强 注销
-            </form>
+            <div class="form-inline my-2 my-md-0">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-primary" href="" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="images/头像.jpg" height="20px" width="20px" alt="头像" style="border-radius: 3px">
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item disabled" href="#">闫强</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">我的微博</a>
+                            <a class="dropdown-item" href="#">个人资料</a>
+                            <a class="dropdown-item" href="#">修改密码</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info"  href="#">注销</a>
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </nav>
 
@@ -77,27 +87,77 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="可以输入200字"></textarea>
                 </div>
             </form>
-            <div class="text-muted">
-                全部 关注 <input type="text"> <button>搜索</button>
+            <div class="text-muted" style="background-color: rgba(224,235,249,0.72)" >
+                <form class="form-inline">
+                    <button  class="btn btn-warning">全部微博</button>
+                    <button  class=" btn btn-primary">我的关注</button>
+                    <div class="form-group mx-sm-3">
+                        <label for="inputPassword2" class="sr-only">搜索</label>
+                        <input type="text" class="form-control" id="inputPassword2" placeholder="搜一搜">
+                    </div>
+                    <button type="submit" class="btn btn-primary">搜索</button>
+                </form>
             </div>
-            <div class="row">
-                <div class="col-sm-2">
-                    用户头像
-                </div>
-                <div class="col-sm-10">
-                    用户名     微博内容
-                    <div>
-                        微博发布时间：2017-09-04   收藏   转发  赞   评论
+            <div class="container" style="margin-top: 5px">
+                <div class="row" style="background-color: #eae6dd;border-bottom:solid 1px  #c4e3f3">
+                    <div class="col-sm-1" style="padding: 5px">
+                        <img  width="50px" style="" src="images/头像.jpg" alt="">
+                    </div>
+                    <div class="col-sm-10" style="padding: 0px;">
+                        <div style="">
+                            闫强 ：    今心情不错今天我的心情不错今天我的心情不错
+                        </div>
+                        <div class="row" style="padding: 5px">
+                            <div class="col-sm-4">
+                                2017-09-04
+                            </div>
+                            <div class="col-sm-8 text-center">
+                                收藏(1)   转发(1)  赞(1)   评论(1)
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <div class="row" style="background-color: #eae6dd;border-bottom:solid 1px  #c4e3f3">
+                    <div class="col-sm-1" style="padding: 5px">
+                        <img  width="50px" style="" src="images/头像.jpg" alt="">
+                    </div>
+                    <div class="col-sm-10" style="padding: 0px;">
+                        <div style="">
+                            闫强 ：    今心情不错今天我的心情不错今天我的心情不错
+                        </div>
+                        <div class="row" style="padding: 5px">
+                            <div class="col-sm-4">
+                                2017-09-04
+                            </div>
+                            <div class="col-sm-8 text-center">
+                                收藏(1)   转发(1)  赞(1)   评论(1)
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
         <div class="col-md-3 bg-faded">
-            <img src="121" alt="">用户名
-            <div>
+            <div class="row" style="padding: 10px">
+                <div class="col-sm-3">
+                    <img src="images/头像.jpg" width="50px" alt="">
+
+                </div>
+                <div class="col-sm-4 text-center" style="padding: 5px">
+                    <h3>闫强</h3>
+                </div>
+            </div>
+
+            <div style="padding: 10px">
                 关注 2|粉丝 3|微博 4
             </div>
+            <ul class="list-group">
+                <a href="" class="list-group-item">明天要数学考试好紧张</a>
+                <a href="" class="list-group-item">明天要数学考试好紧张</a>
+                <a href="" class="list-group-item">明天要数学考试好紧张</a>
+                <a href="" class="list-group-item">明天要数学考试好紧张</a>
+            </ul>
         </div>
     </div>
 </div>
@@ -105,3 +165,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 </body>
 </html>
+

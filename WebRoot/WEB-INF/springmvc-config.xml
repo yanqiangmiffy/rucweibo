@@ -29,6 +29,18 @@
 		</property>
 	</bean>
 	
+	<!-- Spring MVC拦截器定义 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!-- 拦截所有的请求-->
+			<mvc:mapping path="/*"/>
+			<!-- 使用bean定义一个Interceptor -->
+			<bean class="ruc.quincy.interceptor.AuthorizationInterceptor"/>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	
+	
 	<!-- 静态资源解析包括 ：js、css、img、..-->
      <mvc:resources location="/js/" mapping="/js/**"/>
      <mvc:resources location="/images/" mapping="/images/**"/>
