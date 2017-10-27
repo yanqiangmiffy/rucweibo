@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-info"  href="#">注销</a>
+                        <a class="nav-link text-info"  href="logout">注销</a>
                     </li>
                 </ul>
 
