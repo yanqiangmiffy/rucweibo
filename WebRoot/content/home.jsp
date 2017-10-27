@@ -144,7 +144,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                     <img src="images/头像.jpg" width="50px" alt="">
 
                 </div>
-                <div class="col-sm-4 text-center" style="padding: 5px">
+                <div class="col-sm-8 " style="padding: 10px">
                     <h3>${sessionScope.user.user_nickname}</h3>
                 </div>
             </div>
@@ -165,8 +165,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
 </div>
-
-
 </body>
 </html>
 
