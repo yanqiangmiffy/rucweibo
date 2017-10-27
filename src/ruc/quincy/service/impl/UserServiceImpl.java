@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserService{
 	public boolean register(User user) {
 		return userMapper.addUser(user);
 	}
+
+	@Override
+	public void changePassword(User user) {
+		userMapper.changePassword(user);
+	}
 }

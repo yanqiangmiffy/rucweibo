@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 import ruc.quincy.domain.User;
 
@@ -18,4 +19,8 @@ public interface UserMapper {
 			+ "#{user_password},#{user_gender},#{user_email})")
 	@Options(useGeneratedKeys=true,keyProperty="user_id")
 	boolean addUser(User user);
+	
+	//–ﬁ∏ƒ”√ªß√‹¬Î
+	@Update("update weibo_user set user_password=#{user_password} WHERE user_id=#{user_id}")
+	void changePassword(User user);
 }

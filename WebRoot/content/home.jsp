@@ -47,8 +47,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <a class="dropdown-item disabled" href="#">${sessionScope.user.user_nickname}</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">我的微博</a>
-                            <a class="dropdown-item" href="#">个人资料</a>
-                            <a class="dropdown-item" href="#">修改密码</a>
+                            <a class="dropdown-item" href="profile">个人资料</a>
+                            <a class="dropdown-item" href="password">修改密码</a>
                         </div>
                     </li>
                     <li class="nav-item">

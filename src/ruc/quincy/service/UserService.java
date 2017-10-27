@@ -11,4 +11,7 @@ public interface UserService {
 	
 	//ÓÃ»§×¢²á
 	boolean register(User user);
+	
+	//ĞŞ¸ÄÃÜÂë
+	void changePassword(User user);
 }
