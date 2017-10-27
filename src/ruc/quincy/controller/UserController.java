@@ -55,12 +55,16 @@ public class UserController {
 		}
 		return mv;
 	}
-	//加载登录页面
-		@RequestMapping(value="/logout",method=RequestMethod.GET)
-		public String logout(){
-			System.out.println("加载登录页面");
-			return "login";
-		}
+	
+	//实现用户注销
+	@RequestMapping(value="/logout",method=RequestMethod.GET)
+	public String logout(HttpSession session){
+		session.invalidate();
+		System.out.println("用户已经注销，请重新登录");
+		return "login";
+	}	
+		
+		
 	//加载注册页面，方法为GET
 	@RequestMapping(value="/register",method=RequestMethod.GET)
 	public String registerPage(){
