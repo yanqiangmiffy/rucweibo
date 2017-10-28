@@ -115,10 +115,17 @@ public class UserController {
 	}
 	//更新个人资料页面
 	@RequestMapping(value="/profile",method=RequestMethod.POST)
-	public void updateProfile(User user,
-			HttpServletResponse response) throws IOException{
-		System.out.println(user.getUser_realname());
-		response.getWriter().write("操作成功！");
+	public void updateProfile(User userBean,
+			HttpSession session) throws IOException{
+		System.out.println(userBean.getUser_realname()+"电话："+userBean.getUser_phone()+"邮箱"+
+				userBean.getUser_email());
+		User user=(User)session.getAttribute("user");
+		user.setUser_realname(userBean.getUser_realname());
+		user.setUser_phone(userBean.getUser_phone());
+		user.setUser_email(userBean.getUser_email());
+		user.setUser_info(userBean.getUser_info());
+		user.setUser_gender(userBean.getUser_gender());
+		userService.modifyUser(user);
 	}	
 	
 	//加载修改密码页面

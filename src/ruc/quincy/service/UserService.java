@@ -14,4 +14,7 @@ public interface UserService {
 	
 	//修改密码
 	void changePassword(User user);
+	
+	//更改用户信息
+	void modifyUser(User user);
 }

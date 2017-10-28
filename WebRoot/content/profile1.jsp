@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
         <div class="row">
             <div class="push-2 col-md-8" style="margin-top: 10px">
-                <form id="password_form">
+                <form id="profileForm">
                     <div class="form-group row">
                         <label for="user_realname" class="col-sm-3 col-form-label">真实姓名</label>
                         <div class="col-sm-9">
@@ -128,16 +128,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
       <script type="text/javascript">
         $('form').submit(function () {
+          	var params = $("#profileForm").serializeArray();
             $.ajax({
-                cache:true,
-                type:'post',
-                datatype:'text',
+                type:'POST',
                 url:"profile",
-                data:$('#profile').serializeArray(),
-                contentType:"application/x-www-form-urlencoded",
-                async:false,
                 error:function (request) {
-                    alert(request.data);
+                    alert("更新失败");
                 },
                 success:function () {
                     alert('更新成功');
