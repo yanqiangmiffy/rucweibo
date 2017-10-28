@@ -23,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="collapse navbar-collapse" id="containerNavbar">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="home">首页 <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">我的好友</a>
@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         <tr>
                             <td class="text-center form-control-label">性别</td>
                             <td>
-                                <input class="form-check-input" type="radio" name="user_gender" id="gridRadios1" value="女">女   &nbsp;&nbsp;&nbsp;
+                                <input class="form-check-input" checked="checked" type="radio" name="user_gender" id="gridRadios1" value="女">女   &nbsp;&nbsp;&nbsp;
                                 <input class="form-check-input" type="radio" name="user_gender" id="gridRadios2" value="男">男
                             </td>
                         </tr>

@@ -74,7 +74,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="container" style="margin-top: 40px">
     <div class="row">
         <div class=" col-md-8">
-            <form action="">
+            <form action="save" method="post">
                 <div class="form-group">
                     <div class="row" style="font-size: larger">
                         <div class="col-md-3">
@@ -85,6 +85,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         </div>
                     </div>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="可以输入200字"></textarea>
+                    <div class="push-8 col-md-4">
+                        <span class="text-muted">(可按Enter 回复)</span>
+                        <input type="submit" class="btn btn-success" value="提交" @click="add">
+                    </div>
                 </div>
             </form>
             <div class="text-muted" style="background-color: rgba(224,235,249,0.72)" >
