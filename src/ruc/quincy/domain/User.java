@@ -15,6 +15,7 @@ public class User {
 	private String user_info;
 	private String user_school;
 	private String user_company;
+	private String user_image;
 	
 	public int getUser_id() {
 		return user_id;
@@ -87,6 +88,12 @@ public class User {
 	}
 	public void setUser_company(String user_company) {
 		this.user_company = user_company;
+	}
+	public String getUser_image() {
+		return user_image;
+	}
+	public void setUser_image(String user_image) {
+		this.user_image = user_image;
 	}
 	
 }

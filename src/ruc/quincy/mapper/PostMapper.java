@@ -15,7 +15,7 @@ public interface PostMapper {
 	//·¢±íÎ¢²©
 	@Insert("insert into weibo_post(post_ownerid,post_content,post_datetime,post_ownername,"
 			+ "post_ownerimage) VALUES(#{post_ownerid},#{post_content},#{post_datetime},"
-			+ "post_ownername,post_ownerimage)")
+			+ "#{post_ownername},#{post_ownerimage})")
 	@Options(useGeneratedKeys=true,keyProperty="post_id")
 	boolean savePost(Post post);
 	

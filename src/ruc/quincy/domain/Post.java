@@ -3,15 +3,16 @@ package ruc.quincy.domain;
 import java.util.Date;
 
 public class Post {
-	int post_id;
-	int post_ownerid;
-	String post_content;
-	Date post_datetime;
-	String post_ownername;
-	String post_ownerimage;
-	int post_forward;
-	int post_praise;
-	int favorite;
+	private int post_id;
+	private int post_ownerid;
+	private String post_content;
+	private Date post_datetime;
+	private String post_ownername;
+	private String post_ownerimage;
+	private int post_forward;
+	private int post_praise;
+	private int favorite;
+	
 	public int getPost_id() {
 		return post_id;
 	}

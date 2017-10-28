@@ -102,11 +102,7 @@ public class UserController {
 		
 	}
 	
-	//加载主页
-	@RequestMapping(value="/home",method=RequestMethod.GET)
-	public String home(){
-		return "home";
-	}
+	
 	
 	//加载个人资料页面
 	@RequestMapping(value="/profile",method=RequestMethod.GET)

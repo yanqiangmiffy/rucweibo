@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -84,7 +85,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                             <span class="text-success" style="display: inline-block;padding: 5px;font-family: 华文新魏">有什么新鲜事要告诉大家</span>
                         </div>
                     </div>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" placeholder="可以输入200字"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="post_content" placeholder="可以输入200字"></textarea>
                     <div class="push-8 col-md-4">
                         <span class="text-muted">(可按Enter 回复)</span>
                         <input type="submit" class="btn btn-success" value="提交" @click="add">
@@ -103,44 +104,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 </form>
             </div>
             <div class="container" style="margin-top: 5px">
-                <div class="row" style="background-color: #eae6dd;border-bottom:solid 1px  #c4e3f3">
-                    <div class="col-sm-1" style="padding: 5px">
-                        <img  width="50px" style="" src="images/头像.jpg" alt="">
-                    </div>
-                    <div class="col-sm-10" style="padding: 0px;">
-                        <div style="">
-                            闫强 ：    今心情不错今天我的心情不错今天我的心情不错
-                        </div>
-                        <div class="row" style="padding: 5px">
-                            <div class="col-sm-4">
-                                2017-09-04
-                            </div>
-                            <div class="col-sm-8 text-center">
-                                收藏(1)   转发(1)  赞(1)   评论(1)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="background-color: #eae6dd;border-bottom:solid 1px  #c4e3f3">
-                    <div class="col-sm-1" style="padding: 5px">
-                        <img  width="50px" style="" src="images/头像.jpg" alt="">
-                    </div>
-                    <div class="col-sm-10" style="padding: 0px;">
-                        <div style="">
-                            闫强 ：    今心情不错今天我的心情不错今天我的心情不错
-                        </div>
-                        <div class="row" style="padding: 5px">
-                            <div class="col-sm-4">
-                                2017-09-04
-                            </div>
-                            <div class="col-sm-8 text-center">
-                                收藏(1)   转发(1)  赞(1)   评论(1)
-                            </div>
-                        </div>
-                    </div>
-                </div>
+	            <c:forEach items="${requestScope.post}" var="post">
+		         <div class="row" style="background-color: #eae6dd;border-bottom:solid 1px  #c4e3f3">
+	                    <div class="col-sm-1" style="padding: 5px">
+	                        <img  width="50px" style="" src="images/ ${post.post_ownerimage}" alt="">
+	                    </div>
+	                    <div class="col-sm-10" style="padding: 0px;">
+	                        <div style="">
+	                        ${post.post_content}
+	                        </div>
+	                        <div class="row" style="padding: 5px">
+	                            <div class="col-sm-4">
+	                                ${post.post_datetime}
+	                            </div>
+	                            <div class="col-sm-8 text-center">
+	                                收藏(${post.post_forward})   转发(${post.post_praise})  赞(1)   评论(1)
+	                            </div>
+	                        </div>
+	                    </div>
+	                </div>
+				</c:forEach>
             </div>
-
         </div>
         <div class="col-md-3 bg-faded">
             <div class="row" style="padding: 10px">

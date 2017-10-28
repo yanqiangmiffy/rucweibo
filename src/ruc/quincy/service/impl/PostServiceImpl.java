@@ -1,5 +1,7 @@
 package ruc.quincy.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,13 @@ public class PostServiceImpl implements PostService{
 	public boolean savePost(Post post) {
 		// TODO Auto-generated method stub
 		return postMapper.savePost(post);
+	}
+
+	//加载所有的微博
+	@Override
+	public List<Post> selectAllPost() {
+		// TODO Auto-generated method stub
+		return postMapper.selectAllPost();
 	}
 
 }
